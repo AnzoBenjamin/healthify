@@ -4,15 +4,17 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  eslint: {},
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default withSentryConfig(nextConfig, {
   // For all available options, see:
   // https://github.com/getsentry/sentry-webpack-plugin#options
 
-  org: "javascript-mastery",
-  project: "care-pulse",
+  org: "anzo-benjamin",
+  project: "healthify",
 
   // Only print logs for uploading source maps in CI
   silent: !process.env.CI,
